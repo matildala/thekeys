@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Dancing Script";
+}
+
+h2 {
+  font-family: "Oswald";
+}
+
+h3 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Mobile first */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(62, 62, 107, 0) 85%,
+    rgba(224, 224, 162, 0) 100%
+  );
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 4vw;
+  height: auto;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem 3rem;
+  background-image: url(images/hero.png);
+  min-height: 110vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  padding: 1rem;
+  margin: 8rem;
+  background-color: antiquewhite;
+  font-size: small;
+}
+
+.hero-content a {
+  display: block;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  background-color: darkblue;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-content img {
+  max-width: 200px;
+}
+
+#chapters-section {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+}
+
+.chapters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  color: black;
+  padding: 1rem;
+}
+
+#chapters-section article {
+  box-shadow: 3px 5px grey;
+  background-color: white;
+  max-width: 250px;
+}
+
+#chapters-section img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+#chapters-section h3,
+#chapters-section p {
+  padding: 0.6rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.form-container img {
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 2px 5px grey;
+  border-radius: 0.5rem;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 0.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.postal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.submit-button {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  background-color: darkblue;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: "Oswald";
+}
+
+.footer-block {
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .hero-content {
+    color: white;
+    background-color: black;
+  }
+  .rating {
+    color: yellow;
+  }
+  .submit-button {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navigation a:hover {
+    text-shadow: 0px 5px 3px yellow;
+  }
+  #hero-section {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hero-content {
+    width: 40%;
+    margin-right: 5%;
+    color: white;
+    background-color: transparent;
+  }
+  .rating {
+    color: yellow;
+  }
+  .hero-content a:hover {
+    box-shadow: 0px 3px 2px yellow;
+  }
+  .info-content {
+    flex-direction: row;
+  }
+  .info-section article:nth-child(even) .info-content {
+    flex-direction: row-reverse;
+  }
+  #form-section h2 {
+    text-align: center;
+  }
+  .form-container {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .form-container img {
+    max-width: 500px;
+  }
+  .submit-button:hover {
+    box-shadow: 0px 3px 2px grey;
+  }
+  footer {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #hero-section {
+    min-height: 120vh;
+  }
+  .form-container img {
+    max-width: 600px;
+  }
+  .form-content {
+    width: 50%;
+  }
+}
